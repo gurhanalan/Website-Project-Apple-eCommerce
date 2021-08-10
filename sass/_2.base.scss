@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
 *,
 *::after,
 *::before {
@@ -9,6 +11,8 @@
 
 html {
     font-size: 62.5%; // 1 rem = 10 px; 10px/16px = 62.5
+    scroll-behavior: smooth;
+    font-family: "Work Sans", sans-serif;
 
     // @include respond(tab-land) {
     //    font-size: 56.25%; //1 rem = 9px; 9/16=
@@ -21,5 +25,12 @@ html {
     // }
 }
 
+:root {
+    --color-1: #6edae6;
+    --color-white: #fff;
+    --color-black: #000;
+}
 
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+a {
+    text-decoration: none;
+}
