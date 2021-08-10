@@ -43,7 +43,7 @@ a {
   background-color: var(--color-1);
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   clip-path: polygon(100% 0, 100% 95%, 38% 100%, 0 100%, 0 0);
   position: relative; }
 
@@ -74,7 +74,9 @@ a {
 /* End of Navbar */
 /* Cube */
 .cube-wrapper {
-  perspective: 100rem; }
+  perspective: 100rem;
+  position: relative;
+  top: 5rem; }
 
 .cube {
   height: 55rem;
@@ -150,7 +152,14 @@ a {
   border-radius: 100%;
   position: relative; }
   .controls a {
-    position: absolute; }
+    position: absolute;
+    opacity: 0.5;
+    transition: opacity 0.3s;
+    z-index: 1; }
+    .controls a:hover {
+      opacity: 0.8; }
+    .controls a:active {
+      opacity: 1; }
     .controls a:nth-child(1) {
       top: 0;
       left: 50%;
@@ -171,7 +180,42 @@ a {
     position: absolute;
     height: 100%;
     width: 100%;
+    z-index: 0;
     transform: rotate(45deg); }
   .controls i {
     color: var(--color-1);
     font-size: 1.6rem; }
+
+/* Banner */
+.section-1__banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center; }
+  .section-1__banner h1 {
+    font-size: 13rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem; }
+  .section-1__banner p {
+    font-size: 4rem;
+    font-weight: 400;
+    letter-spacing: 0.1rem;
+    margin: 6rem 0 4rem 0; }
+  .section-1__banner span {
+    font-size: 3rem;
+    margin-bottom: 5rem; }
+  .section-1__banner button {
+    padding: 2rem 4rem;
+    font-size: 2rem;
+    background-color: var(--color-black);
+    color: var(--color-1);
+    font-weight: 400;
+    letter-spacing: 0.1rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    clip-path: polygon(50% 0%, 81% 5%, 100% 0, 100% 100%, 80% 95%, 50% 100%, 20% 95%, 0 100%, 0 0, 23% 5%);
+    transition: clip-path 0.5s; }
+    .section-1__banner button:hover {
+      clip-path: polygon(40% 15%, 77% 15%, 100% 10%, 100% 90%, 75% 85%, 40% 85%, 30% 100%, 0 50%, 0 50%, 30% 0); }
