@@ -37,3 +37,25 @@ document.querySelector(".top-z-control").addEventListener("click", () => {
 document.querySelector(".bottom-z-control").addEventListener("click", () => {
     cube.style.transform = `rotateX(${x}deg) rotateY(${y}deg) rotateZ(${(z += 20)}deg) `;
 });
+
+const playPause = () => {
+    if (bool) {
+        interval = setInterval(() => {
+            cube.style.transform = `rotateX(${x}deg) rotateY(${y++}deg) rotateZ(${z}deg)`;
+        }, 100);
+    } else {
+        clearInterval(interval);
+    }
+};
+
+playPause();
+
+document.querySelector(".controls").addEventListener("mouseover", () => {
+    bool = false;
+    playPause();
+});
+
+document.querySelector(".controls").addEventListener("mouseout", () => {
+    bool = true;
+    playPause();
+});
