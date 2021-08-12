@@ -59,3 +59,33 @@ document.querySelector(".controls").addEventListener("mouseout", () => {
     bool = true;
     playPause();
 });
+
+// Slideshow
+const slider = document.querySelector(".slideshow");
+
+for (let i = 1; i < 6; i++) {
+    slider.insertAdjacentHTML(
+        "beforeend",
+        `<div
+style="
+    background-image: url(./images/slideshow/section-1-bg-${i}.jpg);
+"
+></div>`
+    );
+}
+
+const slides = document.querySelectorAll(".slideshow div");
+console.log(slides);
+
+let slideNum = 0;
+const showSlide = () => slides[slideNum].classList.add("show");
+showSlide();
+
+setInterval(() => {
+    document.querySelector(".show").classList.remove("show");
+    slideNum++;
+    showSlide();
+
+    if (slideNum === slides.length - 1) slideNum = -1;
+}, 5000);
+// slides.forEach((slide) => {});
