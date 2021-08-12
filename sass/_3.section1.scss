@@ -267,3 +267,29 @@
         }
     }
 }
+
+// Slideshow
+.slideshow {
+    position: absolute;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.slideshow div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: opacity 2s;
+}
+
+.slideshow div.show {
+    opacity: 1;
+}
