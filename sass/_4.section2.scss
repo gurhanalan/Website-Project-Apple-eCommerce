@@ -12,6 +12,23 @@
         color: var(--color-black);
         position: relative;
         margin-bottom: 5rem;
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: 130%;
+            height: 70vh;
+            background-image: linear-gradient(
+                var(--color-1),
+                var(--color-white)
+            );
+            top: 0;
+            left: 0;
+            z-index: -1;
+            transform-origin: top left;
+            transform: skewX(-50deg);
+            border-radius: 0.5rem;
+        }
     }
 }
 
