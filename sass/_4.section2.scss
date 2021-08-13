@@ -62,3 +62,54 @@
         transition: opacity 2s;
     }
 }
+
+.iphone-btns {
+    display: flex;
+    &__btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        // display: inline-block;
+        height: 6rem;
+        width: 6rem;
+        background-image: linear-gradient(
+            to right,
+            rgb(51, 51, 51) 60%,
+            rgb(82, 82, 82)
+        );
+        margin: 0 3rem;
+        border-radius: 50%;
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: 50%;
+            height: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            border: 0.1rem solid #6edae6;
+            border-radius: 1rem;
+        }
+
+        span {
+            position: absolute;
+            top: -3rem;
+            font-size: 1.6rem;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0.1rem;
+            color: var(--color-1);
+            width: max-content;
+
+            transform: scale(0);
+            transition: transform 0.5s;
+        }
+
+        &:hover span {
+            transform: scale(1);
+        }
+    }
+}

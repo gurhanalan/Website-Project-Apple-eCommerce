@@ -291,3 +291,39 @@ a {
   .iphones:hover .iphones__img-1 {
     opacity: 0;
     transition: opacity 2s; }
+
+.iphone-btns {
+  display: flex; }
+  .iphone-btns__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 6rem;
+    width: 6rem;
+    background-image: linear-gradient(to right, #333333 60%, #525252);
+    margin: 0 3rem;
+    border-radius: 50%;
+    position: relative; }
+    .iphone-btns__btn::after {
+      content: "";
+      position: absolute;
+      width: 50%;
+      height: 50%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border: 0.1rem solid #6edae6;
+      border-radius: 1rem; }
+    .iphone-btns__btn span {
+      position: absolute;
+      top: -3rem;
+      font-size: 1.6rem;
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 0.1rem;
+      color: var(--color-1);
+      width: max-content;
+      transform: scale(0);
+      transition: transform 0.5s; }
+    .iphone-btns__btn:hover span {
+      transform: scale(1); }
