@@ -37,6 +37,11 @@ html {
 a {
   text-decoration: none; }
 
+.section-3, .section-3__content, .macbook-info {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
 .section-1 {
   width: 100%;
   min-height: 100vh;
@@ -327,3 +332,40 @@ a {
       transition: transform 0.5s; }
     .iphone-btns__btn:hover span {
       transform: scale(1); }
+
+.section-3 {
+  background-color: var(--color-black);
+  padding: 15rem 0;
+  clip-path: polygon(68% 0, 100% 0, 100% 97%, 38% 100%, 0 100%, 0 3%);
+  flex-direction: column; }
+  .section-3__heading {
+    color: var(--color-1);
+    font-size: 10rem;
+    font-weight: 200;
+    margin-bottom: 15rem; }
+  .section-3__content {
+    flex-direction: column; }
+
+.macbook-info {
+  flex-direction: column;
+  gap: 3rem; }
+  .macbook-info__heading {
+    color: var(--color-1);
+    font-size: 6rem;
+    font-weight: 400; }
+  .macbook-info__price {
+    color: var(--color-white);
+    font-size: 2.5rem;
+    font-weight: 200; }
+  .macbook-info__btn {
+    color: var(--color-1);
+    width: 25rem;
+    height: 5rem;
+    background-image: linear-gradient(#ddd, #fff);
+    border: none;
+    border-radius: 0.5rem;
+    box-shadow: 0.1rem 0.1rem 0.1rem #fff, -0.1rem -0.1rem 0.1rem #fff;
+    font-size: 1.5rem;
+    font-weight: 500;
+    letter-spacing: 0.2rem;
+    cursor: pointer; }
