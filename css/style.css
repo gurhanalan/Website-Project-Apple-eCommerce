@@ -344,7 +344,17 @@ a {
     font-weight: 200;
     margin-bottom: 15rem; }
   .section-3__content {
-    flex-direction: column; }
+    flex-direction: column;
+    width: 80%;
+    perspective: 1000rem;
+    position: relative; }
+    .section-3__content img {
+      width: inherit; }
+
+.loader-box__loading i {
+  font-size: 10rem;
+  color: var(--color-white);
+  margin-bottom: 2rem; }
 
 .macbook-info {
   flex-direction: column;

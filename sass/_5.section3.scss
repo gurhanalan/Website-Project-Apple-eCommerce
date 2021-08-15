@@ -17,6 +17,27 @@
     &__content {
         @extend %flex-center;
         flex-direction: column;
+
+        width: 80%;
+
+        perspective: 1000rem;
+        position: relative;
+
+        img {
+            width: inherit;
+        }
+    }
+}
+
+.loader-box {
+    &__loading {
+        i {
+            font-size: 10rem;
+            color: var(--color-white);
+            margin-bottom: 2rem;
+        }
+        &--bar {
+        }
     }
 }
 
