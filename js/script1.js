@@ -89,3 +89,16 @@ setInterval(() => {
     if (slideNum === slides.length - 1) slideNum = -1;
 }, 5000);
 // slides.forEach((slide) => {});
+
+// Section 3
+const section3Content = document.querySelector(".section-3__content");
+
+window.addEventListener("scroll", () => {
+    if (
+        window.pageYOffset + window.innerHeight >=
+        section3Content.offsetTop + section3Content.offsetHeight / 2
+    ) {
+        section3Content.classList.add("change");
+    }
+});
+// End of Section 3
