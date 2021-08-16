@@ -1,0 +1,32 @@
+.section-4 {
+    height: 140vh;
+    padding: 20vh 0 20vh;
+    // @extend %flex-center;
+    // position: relative;
+}
+
+.watch {
+    position: relative;
+    &__band {
+        position: absolute;
+        @extend %flex-center;
+
+        &--img {
+            width: 35rem;
+            height: 35rem;
+            object-fit: contain;
+        }
+    }
+
+    &__case {
+        position: absolute;
+
+        @extend %flex-center;
+        flex-direction: column;
+        &--img {
+            width: 35rem;
+            height: 35rem;
+            object-fit: contain;
+        }
+    }
+}

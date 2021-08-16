@@ -37,7 +37,7 @@ html {
 a {
   text-decoration: none; }
 
-.section-3, .section-3__content, .loader-box__loading, .macbook-info {
+.section-3, .section-3__content, .loader-box__loading, .macbook-info, .watch__band, .watch__case {
   display: flex;
   justify-content: center;
   align-items: center; }
@@ -435,3 +435,23 @@ a {
     font-weight: 500;
     letter-spacing: 0.2rem;
     cursor: pointer; }
+
+.section-4 {
+  height: 140vh;
+  padding: 20vh 0 20vh; }
+
+.watch {
+  position: relative; }
+  .watch__band {
+    position: absolute; }
+    .watch__band--img {
+      width: 35rem;
+      height: 35rem;
+      object-fit: contain; }
+  .watch__case {
+    position: absolute;
+    flex-direction: column; }
+    .watch__case--img {
+      width: 35rem;
+      height: 35rem;
+      object-fit: contain; }
