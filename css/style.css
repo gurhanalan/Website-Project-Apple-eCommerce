@@ -37,7 +37,7 @@ html {
 a {
   text-decoration: none; }
 
-.section-3, .section-3__content, .macbook-info {
+.section-3, .section-3__content, .loader-box__loading, .macbook-info {
   display: flex;
   justify-content: center;
   align-items: center; }
@@ -351,14 +351,41 @@ a {
     .section-3__content img {
       width: inherit; }
 
-.loader-box__loading i {
-  font-size: 10rem;
-  color: var(--color-white);
-  margin-bottom: 2rem; }
+.loader-box {
+  position: absolute;
+  top: 6%;
+  width: 60%;
+  height: 85%;
+  background: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url(../images/MacBook/macbook-1-desktop.png) center no-repeat;
+  z-index: -1; }
+  .loader-box__loading {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: var(--color-black);
+    flex-direction: column; }
+    .loader-box__loading i {
+      font-size: 10rem;
+      color: var(--color-white);
+      margin-bottom: 2rem; }
+    .loader-box__loading--bar {
+      width: 22rem;
+      height: 0.3rem;
+      background-color: #888;
+      border-radius: 5rem;
+      position: relative; }
 
 .macbook-info {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
   flex-direction: column;
-  gap: 3rem; }
+  gap: 3rem;
+  opacity: 0; }
   .macbook-info__heading {
     color: var(--color-1);
     font-size: 6rem;
