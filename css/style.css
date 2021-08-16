@@ -351,13 +351,35 @@ a {
     .section-3__content img {
       width: inherit; }
 
+.macbook-img-1 {
+  transform: rotateX(-80deg);
+  transform-origin: bottom; }
+
+.change .macbook-img-1 {
+  transform: rotateX(0deg);
+  transition: transform 2s; }
+
+.change .loader-box {
+  opacity: 1;
+  transition: opacity 1s 2s; }
+  .change .loader-box__loading--bar::after {
+    width: 100%;
+    transition: width 1s 3s; }
+  .change .loader-box__loading {
+    opacity: 0;
+    transition: opacity 1s 4s; }
+  .change .loader-box .macbook-info {
+    opacity: 1;
+    transition: opacity 1s 5s; }
+
 .loader-box {
   position: absolute;
   top: 6%;
   width: 60%;
   height: 85%;
   background: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url(../images/MacBook/macbook-1-desktop.png) center no-repeat;
-  z-index: -1; }
+  z-index: -1;
+  opacity: 0; }
   .loader-box__loading {
     position: absolute;
     width: 100%;
@@ -376,6 +398,13 @@ a {
       background-color: #888;
       border-radius: 5rem;
       position: relative; }
+      .loader-box__loading--bar::after {
+        content: "";
+        position: absolute;
+        width: 0%;
+        height: 100%;
+        border-radius: 5rem;
+        background-color: var(--color-white); }
 
 .macbook-info {
   position: absolute;
