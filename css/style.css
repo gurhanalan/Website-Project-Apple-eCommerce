@@ -37,7 +37,7 @@ html {
 a {
   text-decoration: none; }
 
-.section-3, .section-3__content, .loader-box__loading, .macbook-info, .watch__band, .watch__case {
+.section-3, .section-3__content, .loader-box__loading, .macbook-info, .section-4, .watch, .watch__band, .watch__case, .watch__control {
   display: flex;
   justify-content: center;
   align-items: center; }
@@ -437,8 +437,9 @@ a {
     cursor: pointer; }
 
 .section-4 {
-  height: 140vh;
-  padding: 20vh 0 20vh; }
+  height: 100vh;
+  margin: 20vh 0;
+  position: relative; }
 
 .watch {
   position: relative; }
@@ -455,3 +456,28 @@ a {
       width: 35rem;
       height: 35rem;
       object-fit: contain; }
+  .watch__control {
+    width: 4rem;
+    height: 4rem;
+    background-color: rgba(221, 221, 221, 0.4);
+    border-radius: 50%;
+    color: var(--color-1);
+    position: absolute;
+    font-size: 3rem;
+    z-index: 1; }
+    .watch__control--top {
+      top: 3rem;
+      left: 50%;
+      transform: translateX(-50%); }
+    .watch__control--bottom {
+      bottom: 3rem;
+      left: 50%;
+      transform: translateX(-50%); }
+    .watch__control--left {
+      top: 50%;
+      left: 3rem;
+      transform: translateY(-50%); }
+    .watch__control--right {
+      top: 50%;
+      right: 3rem;
+      transform: translateY(-50%); }

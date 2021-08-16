@@ -1,12 +1,15 @@
 .section-4 {
-    height: 140vh;
-    padding: 20vh 0 20vh;
-    // @extend %flex-center;
-    // position: relative;
+    height: 100vh;
+    // padding: 20vh 0 20vh;
+    margin: 20vh 0;
+    @extend %flex-center;
+    position: relative;
 }
 
 .watch {
     position: relative;
+    @extend %flex-center;
+
     &__band {
         position: absolute;
         @extend %flex-center;
@@ -27,6 +30,39 @@
             width: 35rem;
             height: 35rem;
             object-fit: contain;
+        }
+    }
+
+    &__control {
+        width: 4rem;
+        height: 4rem;
+        background-color: rgba(221, 221, 221, 0.4);
+        border-radius: 50%;
+        color: var(--color-1);
+        position: absolute;
+        font-size: 3rem;
+        @extend %flex-center;
+        z-index: 1;
+
+        &--top {
+            top: 3rem;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        &--bottom {
+            bottom: 3rem;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        &--left {
+            top: 50%;
+            left: 3rem;
+            transform: translateY(-50%);
+        }
+        &--right {
+            top: 50%;
+            right: 3rem;
+            transform: translateY(-50%);
         }
     }
 }
