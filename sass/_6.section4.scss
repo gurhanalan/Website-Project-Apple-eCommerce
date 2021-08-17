@@ -4,6 +4,7 @@
     margin: 20vh 0;
     @extend %flex-center;
     position: relative;
+    overflow: hidden;
 }
 
 .watch {
@@ -13,7 +14,7 @@
     &__band {
         position: absolute;
         @extend %flex-center;
-
+        transition: margin-left 1s;
         &--img {
             width: 35rem;
             height: 35rem;
@@ -26,6 +27,8 @@
 
         @extend %flex-center;
         flex-direction: column;
+        transition: margin-top 1s;
+
         &--img {
             width: 35rem;
             height: 35rem;
@@ -64,5 +67,25 @@
             right: 3rem;
             transform: translateY(-50%);
         }
+
+        &--hide {
+            visibility: hidden;
+            // opacity: 0;
+        }
+    }
+
+    &__btn {
+        position: absolute;
+        bottom: 10%;
+        right: 35%;
+        width: 13rem;
+        height: 5rem;
+        background-color: var(--color-black);
+        color: var(--color-1);
+        border: 0.1rem dashed var(--color-white);
+        border-radius: 4rem;
+        font-size: 1.6rem;
+        font-weight: 200;
+        cursor: pointer;
     }
 }
