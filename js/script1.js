@@ -1,5 +1,5 @@
 // Common JS
-document.querySelectorAll(".controls a").forEach((control) => {
+document.querySelectorAll(".controls a, .watch__control").forEach((control) => {
     control.addEventListener("click", (e) => {
         e.preventDefault();
     });
@@ -102,3 +102,61 @@ window.addEventListener("scroll", () => {
     }
 });
 // End of Section 3
+
+// Section 4
+
+const watchBand = document.querySelector(".watch__band");
+const watchCase = document.querySelector(".watch__case");
+
+const watchBtnUp = document.querySelector(".watch__control--top");
+const watchBtnDown = document.querySelector(".watch__control--bottom");
+const watchBtnLeft = document.querySelector(".watch__control--left");
+const watchBtnRight = document.querySelector(".watch__control--right");
+
+let xAxes = 0;
+let yAxes = 0;
+
+const watchBtnHide = () => {
+    if (yAxes === 280) {
+        watchBtnDown.classList.add("watch__control--hide");
+    } else {
+        watchBtnDown.classList.remove("watch__control--hide");
+    }
+    if (yAxes === -280) {
+        watchBtnUp.classList.add("watch__control--hide");
+    } else {
+        watchBtnUp.classList.remove("watch__control--hide");
+    }
+    if (xAxes === 280) {
+        watchBtnRight.classList.add("watch__control--hide");
+    } else {
+        watchBtnRight.classList.remove("watch__control--hide");
+    }
+    if (xAxes === -280) {
+        watchBtnLeft.classList.add("watch__control--hide");
+    } else {
+        watchBtnLeft.classList.remove("watch__control--hide");
+    }
+};
+
+watchBtnUp.addEventListener("click", () => {
+    watchCase.style.marginTop = `${(yAxes -= 70)}rem`;
+
+    watchBtnHide();
+});
+watchBtnDown.addEventListener("click", () => {
+    watchCase.style.marginTop = `${(yAxes += 70)}rem`;
+
+    watchBtnHide();
+});
+watchBtnLeft.addEventListener("click", () => {
+    watchBand.style.marginLeft = `${(xAxes -= 70)}rem`;
+
+    watchBtnHide();
+});
+watchBtnRight.addEventListener("click", () => {
+    watchBand.style.marginLeft = `${(xAxes += 70)}rem`;
+
+    watchBtnHide();
+});
+// End of Section 4
