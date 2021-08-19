@@ -439,19 +439,22 @@ a {
 .section-4 {
   height: 100vh;
   margin: 20vh 0;
-  position: relative; }
+  position: relative;
+  overflow: hidden; }
 
 .watch {
   position: relative; }
   .watch__band {
-    position: absolute; }
+    position: absolute;
+    transition: margin-left 1s; }
     .watch__band--img {
       width: 35rem;
       height: 35rem;
       object-fit: contain; }
   .watch__case {
     position: absolute;
-    flex-direction: column; }
+    flex-direction: column;
+    transition: margin-top 1s; }
     .watch__case--img {
       width: 35rem;
       height: 35rem;
@@ -481,3 +484,63 @@ a {
       top: 50%;
       right: 3rem;
       transform: translateY(-50%); }
+    .watch__control--hide {
+      visibility: hidden; }
+  .watch__btn {
+    position: absolute;
+    bottom: 10%;
+    right: 35%;
+    width: 13rem;
+    height: 5rem;
+    background-color: var(--color-black);
+    color: var(--color-1);
+    border: 0.1rem dashed var(--color-white);
+    border-radius: 4rem;
+    font-size: 1.6rem;
+    font-weight: 200;
+    cursor: pointer; }
+
+.section-5 {
+  height: 80vh;
+  width: 90%;
+  position: relative;
+  display: flex;
+  justify-content: center; }
+
+.airpods__heading {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 10rem;
+  font-size: 15rem;
+  font-weight: 300;
+  color: var(--color-white);
+  text-shadow: 0.1rem 0.1rem 0 #999; }
+
+.airpods__img {
+  height: 100%;
+  object-fit: contain; }
+  .airpods__img:last-of-type {
+    background-color: var(--color-1); }
+
+.airpods__buttons {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  gap: 4rem; }
+
+.airpods__btn {
+  width: 15rem;
+  height: 4rem;
+  color: white;
+  background-color: var(--color-1);
+  border: none;
+  outline: none;
+  border-radius: 0.5rem;
+  cursor: pointer; }
+  .airpods__btn:last-of-type {
+    background-color: var(--color-white);
+    color: var(--color-1); }
