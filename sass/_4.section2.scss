@@ -6,6 +6,9 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+    @include respond(phone) {
+        overflow: hidden;
+    }
     &__heading {
         font-size: 10rem;
         font-weight: 200;
@@ -22,6 +25,7 @@
                 var(--color-1),
                 var(--color-white)
             );
+
             top: 0;
             left: 0;
             z-index: -1;
