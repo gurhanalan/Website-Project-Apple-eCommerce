@@ -18,6 +18,14 @@
     i {
         font-size: 10rem;
         color: rgba(0, 0, 0, 0.8);
+        @include respond(phone) {
+            font-size: 5rem;
+        }
+    }
+    @include respond(phone) {
+        top: 6rem;
+        left: 50%;
+        transform: translateX(-50%);
     }
 }
 
@@ -28,13 +36,21 @@
     position: absolute;
     top: 3rem;
     right: 10%;
-
+    @include respond(phone) {
+        right: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+    }
     &-link {
         font-size: 2rem;
         display: inline-block;
         margin: 0 3rem;
         color: var(--color-black);
         transition: transform 0.5s;
+        @include respond(tab-land) {
+            font-weight: 700;
+        }
 
         &:hover {
             transform: scale(1.5);
@@ -49,6 +65,14 @@
     perspective: 100rem;
     position: relative;
     top: 5rem;
+    @include respond(tab-port) {
+        position: absolute;
+        top: 20rem;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 0;
+        opacity: 0.5;
+    }
 }
 
 .cube {
@@ -154,6 +178,9 @@
     border-radius: 100%;
     position: relative;
 
+    @include respond(tab-port) {
+        display: none;
+    }
     a {
         position: absolute;
         opacity: 0.5;
@@ -210,21 +237,37 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    z-index: 1;
     h1 {
         font-size: 13rem;
         font-weight: 300;
         text-transform: uppercase;
         letter-spacing: 0.5rem;
+        @include respond(phone) {
+            font-size: 10rem;
+        }
+        &::before {
+            content: "\27F5";
+            @include respond(tab-port) {
+                display: none;
+            }
+        }
     }
     p {
         font-size: 4rem;
         font-weight: 400;
         letter-spacing: 0.1rem;
         margin: 6rem 0 4rem 0;
+        @include respond(phone) {
+            font-size: 3rem;
+        }
     }
     span {
         font-size: 3rem;
         margin-bottom: 5rem;
+        @include respond(phone) {
+            font-size: 2rem;
+        }
     }
 
     button {
@@ -264,6 +307,21 @@
                 0 50%,
                 30% 0
             );
+
+            @include respond(tab-port) {
+                clip-path: polygon(
+                    50% 0%,
+                    81% 5%,
+                    100% 0,
+                    100% 100%,
+                    80% 95%,
+                    50% 100%,
+                    20% 95%,
+                    0 100%,
+                    0 0,
+                    23% 5%
+                );
+            }
         }
     }
 }
