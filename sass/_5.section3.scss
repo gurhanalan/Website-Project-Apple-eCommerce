@@ -125,6 +125,9 @@
         color: var(--color-1);
         font-size: 6rem;
         font-weight: 400;
+        @include respond(phone) {
+            font-size: 4rem;
+        }
     }
     &__price {
         color: var(--color-white);
@@ -135,6 +138,10 @@
         color: var(--color-1);
         width: 25rem;
         height: 5rem;
+        @include respond(phone) {
+            width: 15rem;
+            height: 3rem;
+        }
         background-image: linear-gradient(#ddd, #fff);
         border: none;
         border-radius: 0.5rem;
