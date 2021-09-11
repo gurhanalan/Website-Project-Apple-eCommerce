@@ -1,6 +1,7 @@
 .section-5 {
     height: 80vh;
     width: 90%;
+    margin: 0 auto;
     position: relative;
     display: flex;
     justify-content: center;
@@ -27,6 +28,12 @@
         &:last-of-type {
             background-color: var(--color-1);
         }
+
+        &:first-of-type {
+            @include respond(tab-land) {
+                display: none;
+            }
+        }
     }
 
     &__buttons {
@@ -47,6 +54,10 @@
         outline: none;
         border-radius: 0.5rem;
         cursor: pointer;
+        @include respond(tab-land) {
+            background-color: var(--color-white);
+            color: var(--color-1);
+        }
 
         &:last-of-type {
             background-color: var(--color-white);
