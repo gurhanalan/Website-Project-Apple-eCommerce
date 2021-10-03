@@ -1,6 +1,6 @@
 # Website - Apple eCommerce
 
-[This project](https://gurhanalan.github.io/Website-Project-Apple-eCommerce/) is a website of Apple displaying their products.
+[This project](https://gurhan-apple-ecommerce.netlify.app/) is a website of Apple displaying their products.
 
 ## Table of contents
 
@@ -33,7 +33,7 @@ Users should be able to:
 
 ### Links
 
--   Solution URL: [Live Website](https://gurhanalan.github.io/Website-Project-Apple-eCommerce/)
+-   Solution URL: [Live Website](https://gurhan-apple-ecommerce.netlify.app/)
 
 ## My process
 
